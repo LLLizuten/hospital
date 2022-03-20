@@ -9,5 +9,10 @@
 <a href="/hospital/master/master_interviewinfo.jsp">预约</a>
 <a href="/hospital/master/master_schinfo.jsp">排班</a>
 
+<!-- lyy -->
+<a href="/hospital/patient/PatientLogin.jsp"><button>患者登录</button></a>
+<a href="/hospital/patient/PatientRegister.jsp"><button>患者注册</button></a><br><br>
+
+
 </body>
 </html>

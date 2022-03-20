@@ -33,6 +33,6 @@ public class SCHAlterServlet extends HttpServlet {
 
         String sql = "update SCH SET  SCH_size='" + SCH_size + "' where SCH_date='" + SCH_date +"' and SCH_time='" + SCH_time +"'";
         dbbean.update(sql);
-        req.getRequestDispatcher("index.jsp").forward(req,resp);
+        req.getRequestDispatcher("success.jsp").forward(req,resp);
     }
 }

@@ -119,7 +119,6 @@ public class DBBean {
      * 患者信息修改
      */
     public void update(String sql){
-
         try {
             Connection conn = JDBCon();
             Statement stmt = conn.createStatement();
@@ -127,7 +126,75 @@ public class DBBean {
         } catch (SQLException e) {
             e.printStackTrace();
         }
-
-
     }
+
+    //lyy-----------------------------------------------------------
+    /**
+     * 患者登录判断逻辑
+     */
+    public boolean patientLogin(String name, String password) {
+        Connection connection = JDBCon();
+        Statement statement = null;
+
+        try {
+            statement = connection.createStatement();
+            String sql = "select * from patient where P_id='" + name + "' and P_psd='" + password + "'";
+            ResultSet resultSet = statement.executeQuery(sql);
+            if (resultSet.next()) {
+                return true;
+            } else {
+                return false;
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+    /**
+     * 患者注册
+     */
+    public boolean patientRegister(String id, String name, String password, String age, String sex) {
+        Connection connection = JDBCon();
+        PreparedStatement preparedStatement = null;
+
+
+        try {
+            String sql = "insert into patient values(?,?,?,?,?)";
+
+            preparedStatement = connection.prepareStatement(sql);
+
+            preparedStatement.setString(1,id);
+            preparedStatement.setString(2, password);
+            preparedStatement.setString(3, name);
+            preparedStatement.setString(4, sex);
+            preparedStatement.setInt(5, Integer.parseInt(age));
+
+            int r = preparedStatement.executeUpdate();
+            if (r >= 0) {
+                System.out.println("注册成功");
+                return true;
+            } else {
+                System.out.println("注册失败");
+                return false;
+            }
+        } catch (SQLException e) {
+            System.out.println("注册失败");
+            e.printStackTrace();
+            return false;
+        } finally {
+            try {
+                connection.close();
+            } catch (SQLException e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
+
 }

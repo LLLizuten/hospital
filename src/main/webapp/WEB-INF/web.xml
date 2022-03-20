@@ -55,7 +55,7 @@
     <url-pattern>/*</url-pattern>
   </filter-mapping>
   
-
+<!-- jyl -->
 
   <servlet>
     <servlet-name>InterviewDelServlet</servlet-name>
@@ -109,6 +109,25 @@
   <servlet-mapping>
     <servlet-name>SURDELServlet</servlet-name>
     <url-pattern>/master/SURDELServlet</url-pattern>
+  </servlet-mapping>
+
+  <!-- lyy -->
+  <servlet>
+    <servlet-name>PatientLoginServlet</servlet-name>
+    <servlet-class>controller.patient.PatientLoginServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientLoginServlet</servlet-name>
+    <url-pattern>/patient/PatientLoginServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>PatientRegisterServlet</servlet-name>
+    <servlet-class>controller.patient.PatientRegisterServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>PatientRegisterServlet</servlet-name>
+    <url-pattern>/patient/PatientRegisterServlet</url-pattern>
   </servlet-mapping>
 
 </web-app>
