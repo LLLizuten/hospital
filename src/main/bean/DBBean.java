@@ -62,8 +62,6 @@ public class DBBean {
     public boolean doctorRegister(String userName, String password, String name, String age, String sex, String id) {
         Connection connection = JDBCon();
         PreparedStatement preparedStatement = null;
-        //Statement stmt ;
-
         try {
             String sql = "insert into doctor values(?,?,?,?,?,?)";
             //stmt = connection.prepareStatement(sql);

@@ -15,6 +15,12 @@
     <h1>医生注册</h1>
     <table>
         <form action="http://localhost:8080/hospital/doctorReg" method="post">
+            <%
+                String message = (String) request.getAttribute("message");
+                if (message != null) {
+                    out.println(message);
+                }
+            %><br><br>
             <tr>
                 <td>用户名：</td>
                 <td><input type="text" name="userName"></td>
@@ -46,12 +52,10 @@
                 <td><input type="submit" value="提交"></td>
                 <td><input type="reset" value="取消"></td>
             </tr>
-
-
-
         </form>
-
     </table>
+    <br>
+    <a href="http://localhost:8080/hospital/index.jsp">返回主页</a>
 
 </div>
 </body>

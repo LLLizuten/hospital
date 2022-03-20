@@ -50,6 +50,8 @@
     </table>
 
     <a href="http://localhost:8080/hospital/doctor/doctor_pinfo.jsp">患者队列查询</a>
+    <br>
+    <a href="http://localhost:8080/hospital/doctor/doctor_login.jsp">退出登录</a>
 </div>
 </body>
 </html>

@@ -1,4 +1,4 @@
-package controller;
+package controller.doctor;
 
 import bean.DBBean;
 
@@ -15,6 +15,12 @@ import java.sql.Connection;
  */
 public class DoctorRegServlet extends HttpServlet {
     private DBBean dbBean = new DBBean();
+
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        doPost(req,resp);
+    }
+
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //获取请求参数
@@ -25,12 +31,14 @@ public class DoctorRegServlet extends HttpServlet {
         String age = req.getParameter("age");
         String sur_id = req.getParameter("sur_id");
 
-
         //调用DBBean连接数据库并登录
         Connection connection = dbBean.JDBCon();
-        //boolean loginResult = dbBean.doctorRegister(name, password, );
         dbBean.doctorRegister(userName,password,name,age,sex,sur_id);
 
+        String message = "注册成功，请登录吧！";
+        req.setAttribute("message", message);
 
+        //注册完后跳回登录页面
+        req.getRequestDispatcher("/doctor/doctor_login.jsp").forward(req, resp);
     }
 }

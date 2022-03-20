@@ -1,4 +1,4 @@
-package controller;
+package controller.doctor;
 
 import bean.DBBean;
 import com.mysql.cj.Session;

@@ -8,7 +8,7 @@
   <!-- 登录 -->
   <servlet>
     <servlet-name>DoctorLoginServlet</servlet-name>
-    <servlet-class>controller.DoctorLoginServlet</servlet-class>
+    <servlet-class>controller.doctor.DoctorLoginServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DoctorLoginServlet</servlet-name>
@@ -18,7 +18,7 @@
   <!-- 注册 -->
   <servlet>
     <servlet-name>DoctorRegServlet</servlet-name>
-    <servlet-class>controller.DoctorRegServlet</servlet-class>
+    <servlet-class>controller.doctor.DoctorRegServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>DoctorRegServlet</servlet-name>
