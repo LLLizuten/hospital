@@ -55,7 +55,7 @@
         </form>
     </table>
     <br>
-    <a href="http://localhost:8080/hospital/index.jsp">返回主页</a>
+    <a href="http://localhost:8080/hospital/index.jsp"><button>返回主页</button></a>
 
 </div>
 </body>

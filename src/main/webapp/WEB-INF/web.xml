@@ -28,7 +28,7 @@
   <!-- 患者信息修改 -->
   <servlet>
     <servlet-name>PatientAlterServlet</servlet-name>
-    <servlet-class>controller.PatientAlterServlet</servlet-class>
+    <servlet-class>controller.patient.PatientAlterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PatientAlterServlet</servlet-name>
@@ -38,7 +38,7 @@
   <!-- 患者信息删除 -->
   <servlet>
     <servlet-name>PatientDeleteServlet</servlet-name>
-    <servlet-class>controller.PatientDeleteServlet</servlet-class>
+    <servlet-class>controller.patient.PatientDeleteServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>PatientDeleteServlet</servlet-name>
@@ -59,7 +59,7 @@
 
   <servlet>
     <servlet-name>InterviewDelServlet</servlet-name>
-    <servlet-class>controller.InterviewDelServlet</servlet-class>
+    <servlet-class>controller.master.InterviewDelServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InterviewDelServlet</servlet-name>
@@ -68,7 +68,7 @@
 
   <servlet>
     <servlet-name>InterviewAlterServlet</servlet-name>
-    <servlet-class>controller.InterviewAlterServlet</servlet-class>
+    <servlet-class>controller.master.InterviewAlterServlet</servlet-class>
   </servlet>
   <servlet-mapping>
     <servlet-name>InterviewAlterServlet</servlet-name>

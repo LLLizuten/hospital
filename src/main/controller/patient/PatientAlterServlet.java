@@ -1,4 +1,4 @@
-package controller;
+package controller.patient;
 
 import bean.DBBean;
 

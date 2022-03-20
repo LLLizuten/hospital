@@ -73,6 +73,8 @@
     <a href="http://localhost:8080/hospital/patient/PatientLogin.jsp">
         <button>去登录吧~</button>
     </a>
+    <br>
+    <a href="http://localhost:8080/hospital/index.jsp"><button>返回主页</button></a>
 </div>
 </body>
 </html>

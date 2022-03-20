@@ -46,6 +46,8 @@ function loginSubmit(){
 </table>
 </form>
 <a href="http://localhost:8080/hospital/patient/PatientRegister.jsp"><button>去注册吧~</button></a>
+    <br>
+    <a href="http://localhost:8080/hospital/index.jsp"><button>返回主页</button></a>
 </div>
 
 
